@@ -1,0 +1,21 @@
+{%extends '../index.html'%}
+{%load static%}
+{%block main%}
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> 
+    <div class="card p-4"> 
+        <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+             
+                <img src="{%static 'profile.jpg'%}" height="100" width="100" style="border-radius: 50%;"/>
+            <span class="name mt-3">{{request.user.first_name | title}} {{request.user.last_name | title}}</span> <span class="idd">@{{request.user}}</span> 
+            
+            <div>Addresses : <a href="/accounts/addresses/">Click here</a></div> 
+            <div>Change Password : <a href="/accounts/password/change">Click here</a></div> 
+            <div>Manage emails : <a href="/accounts/email/">Click here</a></div> 
+            <div>Social Connections : <a href="/accounts/social/connections/">Click here</a></div> 
+
+
+                         <div class=" px-2 rounded mt-4 date "> <span class="join">Joined {{request.user.date_joined}}</span> </div>
+                            <div class=" px-2 rounded mt-4 date ">     <span class="join">Last login {{request.user.last_login}}</span> </div>
+                         </div> </div>
+</div>
+{%endblock%}

@@ -1,0 +1,50 @@
+
+{%extends 'header.html'%}
+{%block main%}
+
+<div id="layoutSidenav_content">
+<main>
+    <div class="container-fluid px-4">
+        
+        <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Acres</th>       
+                <th>Facility</th>
+                <th>Investement</th>
+                <th>Date</th>
+                <th>Production</th>
+                <th>Update</th>
+               
+               
+                
+               
+            </tr>
+        </thead>
+        <tbody>
+           {%for i in productions %}
+           <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.acres | title}}</td>
+             <td>{{i.facility}}</td>
+             <td >{{i.investment}}</td>
+             <td >{{i.created}}</td>
+             <td><input type="number" name="production" id="production" value="{{i.production}}"></td>
+             <td><a onclick="(() => { 
+                const productionValue = document.getElementById('production').value;
+                const url = '/productions/update/{{i.id}}/' + productionValue+'/';
+                if(productionValue>0)
+                window.location.href = url;
+            else alert('Enter value')
+            })()">Edit</a></td>
+           </tr>
+             {%endfor%} 
+        </tbody>
+        </table>
+        
+
+    </div>
+</main>
+</div>
+{%endblock%}

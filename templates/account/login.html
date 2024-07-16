@@ -1,0 +1,72 @@
+
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+        <!-- <title>Popup Login Form Design | CodingNepal</title> -->
+        <!-- <link rel="stylesheet" href="{%static 'css/login.css'%}" /> -->
+        <link rel="stylesheet" href="{%static 'css/styles.css'%}" />
+<style>
+    .container{
+        width: 400px;
+    }
+    .background2 {
+    background: url("{%static 'images/background2.jpg'%}") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+        
+    </head>
+    <body class="background2" style="color: white;">
+        <div class="center overlay">
+      
+            <div class="container">
+                
+                <div class="text">Login Form</div>
+                
+                <form method="post">
+                  {%csrf_token%}
+                  <br>
+                  {{form.non_field_errors}}
+                    <div class="data">
+                        <label>Username</label>
+                        {{form.login}}
+                        {{form.login.errors}}
+                    </div>
+                    <div class="data">
+                        <label>Password</label>
+                        {{form.password}}
+                        {{form.password.errors}}
+                    </div>
+                    <a class="" href="{% url 'account_reset_password' %}" style="color: rgb(255, 25, 25);">Forgot Password</a>
+                    
+                        <div class="inner"></div>
+                        <button type="submit" class="btn btn1" style="margin: 10px;" style="color: rgb(255, 25, 25);">Login</button>
+                   
+    
+                    <div class="signup-link">
+                        Not a member? <a href="/accounts/signup" style="color: rgb(38, 255, 0);">Signup now</a>
+                    </div>
+                </form>
+                
+                <center>
+                    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                </center>
+            </div>
+        </div>
+    </body>
+</html>
+
+{%endblock%}
+
+
+

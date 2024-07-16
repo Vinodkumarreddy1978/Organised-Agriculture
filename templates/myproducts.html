@@ -1,0 +1,49 @@
+
+{%extends 'header.html'%}
+{%block main%}
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            
+            <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Name</th>       
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Price</th>
+                    <th>Address</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    
+                   
+                   
+                    
+                   
+                </tr>
+            </thead>
+            <tbody>
+               {%for i in products %}
+               <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{i.user.username | title}}</td>
+                 <td>{{i.user.email}}</td>
+                 <td >{{i.phone}}</td>
+                 <td >{{i.price}}</td>
+                 <td>{{i.address}}</td>
+                 <td><a href="/editproducts/{{i.id}}/">Edit</a></td>
+                 <td><a href="/deleteproducts/{{i.id}}/">Delete</a></td>
+                
+               </tr>
+                 {%endfor%} 
+            </tbody>
+            </table>
+            
+    
+        </div>
+    </main>
+    </div>
+    {%endblock%}
+    

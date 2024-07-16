@@ -1,0 +1,32 @@
+{%extends 'index.html'%}
+{%load static%}
+{%block main%}
+<body>
+    <div class="card container" style="width: 40%;">
+        <div class="card-body">
+                <center><h5 class="card-title " >Add Address</h5></center>
+          <hr>
+            <form action="" method="post" >
+                {%csrf_token%}
+                {%for field in form%}
+        <div>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">{{field.label}}</label>
+                {{field}}
+                </div>
+        {%for error in field.errors%}
+          <font color="red">⦿{{error}}</font> <br>
+         
+           {%endfor%}
+        </div>
+        {%endfor%}
+        
+                  <center><button type="submit" class="btn btn-success">Submit</button></center>
+            </form>
+            
+        </div>
+    </div>
+
+
+</body>
+{%endblock%}

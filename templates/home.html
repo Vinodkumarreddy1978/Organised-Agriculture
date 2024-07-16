@@ -1,0 +1,81 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Website</title>
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+    <style>
+        .background {
+    background: url("{%static 'images/background.jpg'%}") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background2 {
+    background: url("{%static 'images/background2.jpg'%}") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            height: 60px;
+        }
+        
+        header .logo img {
+            vertical-align: middle;
+        }
+        
+        header .logo a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+
+        <header>
+            <div class="logo" style="width:100%;">
+                <img src="http://www.iftr.in/assests/img/iftrlogo.png" height="80" style="margin-left:20%;">
+                <a href="/" style="font-size:30px;">Indigenous and Frontier Technology Research Centre</a>
+            </div>
+            </header>
+    </div>
+
+    <div class="background">
+        <div class="overlay" >
+            <div class="content">
+                <h1>Welcome to Modern Agriculture</h1>
+                <p>Empowering Farmers with Technology</p>
+                <div class="buttons">
+                    <a href="/accounts/login" ><button class="btn">Login</button></a>
+                    <a href="/accounts/signup" ><button class="btn">Sign Up</button> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

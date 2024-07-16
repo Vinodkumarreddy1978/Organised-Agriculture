@@ -1,0 +1,82 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+margin: 0;
+padding: 0;
+outline: none;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+.background {
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body {
+color: white;
+height: 100vh;
+width: 100%;
+background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+
+
+
+#show:checked ~ .container {
+display: block;
+}
+.container .text {
+font-size: 35px;
+font-weight: 600;
+text-align: center;
+}
+.container form {
+margin-top: -20px;
+}
+.container form .data {
+height: 45px;
+width: 100%;
+margin: 40px 0;
+}
+form .data label {
+font-size: 18px;
+}
+form .data input {
+height: 100%;
+width: 100%;
+padding-left: 10px;
+font-size: 17px;
+border: 1px solid silver;
+}
+form .data input:focus {
+border-color: #3498db;
+border-bottom-width: 2px;
+}
+
+tr{
+display: block;
+}

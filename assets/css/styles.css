@@ -1,0 +1,147 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    color: white;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background: #000000;
+    color: white;
+    padding: 15px 30px;
+    border: 2px solid transparent; /* Initial border style */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    border-radius: 10px;
+    border-color: white;
+}
+
+.btn:hover {
+    animation: disco-border 1s linear infinite;
+    border-color: transparent; /* Ensure the border remains transparent */
+}
+
+@keyframes disco-border {
+    0% {
+        border-color: #ff0000;
+    }
+    10% {
+        border-color: #ff7300;
+    }
+    20% {
+        border-color: #fffb00;
+    }
+    30% {
+        border-color: #48ff00;
+    }
+    40% {
+        border-color: #00ffd5;
+    }
+    50% {
+        border-color: #002bff;
+    }
+    60% {
+        border-color: #7a00ff;
+    }
+    70% {
+        border-color: #ff00c8;
+    }
+    80% {
+        border-color: #ff0000;
+    }
+    90% {
+        border-color: #ff7300;
+    }
+    100% {
+        border-color: #fffb00;
+    }
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+/* login.html */
+
+
+
+.container {
+    margin-top:20px;
+    width: 30%;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+.text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+form .data {
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+}
+form .data input {
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px solid silver;
+}
+
+form .data label {
+    font-size: 18px;
+}
+
+.btn1{
+    padding: 8px 15px;
+}
+
+label{
+    float: left;
+}

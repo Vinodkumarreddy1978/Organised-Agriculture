@@ -1,0 +1,47 @@
+{%extends '../index.html'%}
+{%block main%}
+
+<div id="layoutSidenav_content">
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Addresses</h1>
+        
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active"><a href="/accounts/address/add">Add Address</a></li>
+        </ol>
+       
+        <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Full name</th>       
+                <th>Phone numbers</th>
+                <th>Address</th>
+                <th>Pin code</th>
+                <th>Manage</th>
+               
+               
+                
+               
+            </tr>
+        </thead>
+        <tbody>
+           {%for i in addresses %}
+           <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.full_name | title}}</td>
+             <td>{{i.mobile_no}} ,{{i.alternate_no}}</td>
+             <td width="100px">{{i.address}}</td>
+             <td>{{i.pin_code}}</td>
+             <td><a href='/accounts/address/edit/{{i.id}}' class='btn btn-warning'>Edit</a> <a href='/accounts/address/delete/{{i.id}}' class='btn btn-danger'>Delete</a></td>
+          
+           </tr>
+             {%endfor%} 
+        </tbody>
+        </table>
+        
+
+    </div>
+</main>
+</div>
+{%endblock%}

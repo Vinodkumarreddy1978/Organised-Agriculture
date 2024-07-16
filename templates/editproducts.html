@@ -1,0 +1,10 @@
+{%extends 'header.html'%}
+{%block main%}
+<form action="" method="post">
+    {%csrf_token%}
+    Price: <input type="number"  name="price" value="{{data.price}}" placeholder="Enter price" required><br>
+    Phone Number: <input type="tel" name="phone" value="{{data.phone}}" placeholder="Enter number" required><br>
+    Address: <textarea name="address" id=""  required >{{data.address}}</textarea><br>
+    <button type="submit">Submit</button>
+</form>
+{%endblock%}
